@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <style>
+        *,
+        *::before,
+        *::after{
+            margin:0;
+            padding:0;
+        }
+        body{
+            padding:40px;
+            font-family: 'Montserrat', sans-serif;
+            height:400vh;
+        }
+        .add-field-btn{
+            position:fixed;
+            top:20%;
+            left:1%;
+            z-index:2;
+            padding:0 8px;
+        }
+        .offcanvas{
+            overflow:auto;
+        }
+        .alert-box{
+            background-color: rgb(225, 85, 85);
+        }
+        .bi-pencil-square,.bi-trash-fill,.bi-arrows-move{
+            font-size:18px;
+            cursor: pointer;
+        }
+        @media screen and (max-width:500px)
+        {
+            body{
+                padding:10px;
+            }
+            .offcanvas{
+                width:50% !important;
+            }
+        }
+    </style>
+    <title>Form Builder</title>
+</head>
+<body>
+    <!-- <div class="container p-5">
+
+    </div> -->
+    <div class="container-fluid">
+        <h1>Form Builder <i class="bi bi-bricks"></i></h1>
+        <hr>
+            <button class="btn btn-success add-field-btn mb-3 shadow-lg fs-4 fw-bolder" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">+</button>  
+        <div class="alert alert-box text-white" role="alert">
+            A simple warning alert—check it out!
+        </div>   
+        <div class="form-field">
+            <div class="card">
+                <div class="card-header d-flex justify-content-end">
+                    <div class="button-wrapper">
+                        <i class="bi bi-arrows-move text-secondary"></i>
+                        <i class="bi bi-pencil-square text-success ms-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
+                        <i class="bi bi-trash-fill text-danger ms-2"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Form field Here...</h5>
+                </div>
+              </div>
+        </div>
+
+        <!-- FORM FIELD MODAL STARTS HERE -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success">Understood</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- ENDS HERE -->
+
+        <!-- SELECT ELEMENT AREA STARTS HERE -->
+        <div class="offcanvas offcanvas-start w-25" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Add New Form Field</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+                            <div class="row mb-3">
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Text</button></div>
+                <div class="col-6"><button class="btn btn-success rounded-0 w-100">Email</button></div>
+              </div>
+              
+            </div>
+          </div>
+    </div>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+<script>
+const alertBox = document.querySelector('.alert-box');
+const addNewFieldBtn = document.querySelector('.add-field-btn');
+
+addNewFieldBtn.addEventListener('click',()=>{
+    alertBox.classList.add('d-none');
+})
+</script>
+</body>
+</html>
